@@ -19,7 +19,6 @@
     <commons.collections.version>3.2.1</commons.collections.version>
     <commons.dbcp.version>1.4</commons.dbcp.version>
     <commons.pool.version>1.5.6</commons.pool.version>
-    <karaf.version>2.3.1</karaf.version>
     <renci.jlrm.version>0.2.40</renci.jlrm.version>
     <renci.commons.version>0.2.0</renci.commons.version>
     <slf4j.version>1.7.2</slf4j.version>
@@ -87,19 +86,6 @@
 	<version>4.3.1</version>
       </dependency>
       <dependency>
-	<groupId>org.apache.karaf</groupId>
-	<artifactId>apache-karaf</artifactId>
-	<version>${karaf.version}</version>
-	<type>tar.gz</type>
-      </dependency>
-      <dependency>
-	<groupId>org.apache.karaf</groupId>
-	<artifactId>apache-karaf</artifactId>
-	<version>${karaf.version}</version>
-	<type>xml</type>
-	<classifier>features</classifier>
-      </dependency>
-      <dependency>
 	<groupId>org.renci.jlrm</groupId>
 	<artifactId>jlrm-api</artifactId>
 	<version>${renci.jlrm.version}</version>
@@ -139,18 +125,6 @@
 	<artifactId>org.osgi.core</artifactId>
 	<version>1.4.0</version>
       </dependency>
-      <dependency>
-	<groupId>org.renci.gate</groupId>
-	<artifactId>gate-api</artifactId>
-	<version>0.1.28-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-	<groupId>org.renci.gate</groupId>
-	<artifactId>gate-features</artifactId>
-	<version>0.1.28-SNAPSHOT</version>
-	<type>xml</type>
-	<classifier>features</classifier>
-      </dependency>            
       <dependency>
 	<groupId>org.ops4j.pax.logging</groupId>
 	<artifactId>pax-logging-service</artifactId>
@@ -208,4 +182,29 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+  <build>
+    <plugins>
+      <plugin>
+	<groupId>org.apache.felix</groupId>
+	<artifactId>maven-bundle-plugin</artifactId>
+	<version>${maven.bundle.plugin.version}</version>
+	<extensions>true</extensions>
+	<inherited>true</inherited>
+	<configuration>
+	  <excludeDependencies>${aries.osgi.exclude.dependencies}</excludeDependencies>
+	  <instructions>
+	    <Bundle-Name>${project.name}</Bundle-Name>
+	    <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+	    <Implementation-Title>${project.name}</Implementation-Title>
+	    <Implementation-Version>${project.version}</Implementation-Version>
+	    <Bundle-Vendor>RENCI</Bundle-Vendor>
+	    <Include-Resource>{maven-resources}</Include-Resource>
+	    <_versionpolicy>[$(version;==;$(@)),$(version;+;$(@)))</_versionpolicy>
+	    <_removeheaders>Ignore-Package,Include-Resource,Private-Package,Bundle-DocURL</_removeheaders>
+	    <_failok>false</_failok>
+	  </instructions>
+	</configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
