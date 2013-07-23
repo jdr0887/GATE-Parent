@@ -8,7 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.renci.gate</groupId>
   <artifactId>gate</artifactId>
-  <version>0.0.12-SNAPSHOT</version>
+  <version>0.0.12</version>
   <packaging>pom</packaging>
   <properties>
     <commons.discovery.version>0.5</commons.discovery.version>
@@ -26,7 +26,7 @@
   <scm>
     <developerConnection>scm:git:ssh://${user.name}@code.renci.org/gitroot/gate_parent</developerConnection>
     <connection>scm:git:ssh://developername@code.renci.org/gitroot/gate_parent</connection>
-    <tag>HEAD</tag>
+    <tag>gate-0.0.12</tag>
   </scm>
   <repositories>
     <repository> 
