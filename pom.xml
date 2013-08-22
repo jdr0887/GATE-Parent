@@ -34,6 +34,11 @@
       <name>SpringSource Enterprise Bundle Repository - SpringSource Bundle External</name> 
       <url>http://repository.springsource.com/maven/bundles/external</url> 
     </repository>
+    <repository> 
+      <id>com.springsource.repository.bundles.external</id> 
+      <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name> 
+      <url>http://repository.springsource.com/maven/bundles/external</url> 
+    </repository>
     <repository>
       <id>ibiblio.repository</id>
       <name>ibiblio.repository</name>
