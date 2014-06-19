@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
     <groupId>org.renci</groupId>
-    <artifactId>renci</artifactId>
-    <version>0.0.1</version>
+    <artifactId>parent</artifactId>
+    <version>0.0.3</version>
   </parent>
   <name>GATE</name>
   <modelVersion>4.0.0</modelVersion>
@@ -19,7 +19,7 @@
     <commons.collections.version>3.2.1</commons.collections.version>
     <commons.dbcp.version>1.4</commons.dbcp.version>
     <commons.pool.version>1.5.6</commons.pool.version>
-    <renci.jlrm.version>0.3.26</renci.jlrm.version>
+    <renci.jlrm.version>0.4.2</renci.jlrm.version>
     <renci.commons.version>0.2.0</renci.commons.version>
     <slf4j.version>1.7.2</slf4j.version>
   </properties>
@@ -28,46 +28,6 @@
     <connection>scm:git:ssh://developername@code.renci.org/gitroot/gate_parent</connection>
     <tag>HEAD</tag>
   </scm>
-  <repositories>
-    <repository> 
-      <id>com.springsource.repository.bundles.external</id> 
-      <name>SpringSource Enterprise Bundle Repository - SpringSource Bundle External</name> 
-      <url>http://repository.springsource.com/maven/bundles/external</url> 
-    </repository>
-    <repository> 
-      <id>com.springsource.repository.bundles.release</id> 
-      <name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name> 
-      <url>http://repository.springsource.com/maven/bundles/release</url> 
-    </repository> 
-    <repository>
-      <id>ibiblio.repository</id>
-      <name>ibiblio.repository</name>
-      <url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
-      <releases>
-	<enabled>true</enabled>
-      </releases>
-      <snapshots>
-	<enabled>true</enabled>
-	<updatePolicy>never</updatePolicy>
-	<checksumPolicy>fail</checksumPolicy>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>renci.repository</id>
-      <name>renci.repository</name>
-      <url>http://ci-dev.renci.org/nexus/content/repositories/public</url>
-      <releases>
-	<enabled>true</enabled>
-	<updatePolicy>always</updatePolicy>
-	<checksumPolicy>warn</checksumPolicy>
-      </releases>
-      <snapshots>
-	<enabled>true</enabled>
-	<updatePolicy>never</updatePolicy>
-	<checksumPolicy>fail</checksumPolicy>
-      </snapshots>
-    </repository>
-  </repositories>
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -134,16 +94,6 @@
 	<groupId>org.apache.felix</groupId>
 	<artifactId>org.osgi.core</artifactId>
 	<version>1.4.0</version>
-      </dependency>
-      <dependency>
-	<groupId>org.ops4j.pax.logging</groupId>
-	<artifactId>pax-logging-service</artifactId>
-	<version>1.6.10</version>
-      </dependency>
-      <dependency>
-	<groupId>org.ops4j.pax.logging</groupId>
-	<artifactId>pax-logging-api</artifactId>
-	<version>1.6.10</version>
       </dependency>
       <dependency>
 	<groupId>org.renci.commons</groupId>
