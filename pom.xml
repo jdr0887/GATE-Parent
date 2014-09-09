@@ -4,7 +4,7 @@
     <artifactId>parent</artifactId>
     <version>0.0.3</version>
   </parent>
-  <name>GATE</name>
+  <name>GATE Parent</name>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.renci.gate</groupId>
   <artifactId>gate</artifactId>
@@ -24,9 +24,8 @@
     <slf4j.version>1.7.2</slf4j.version>
   </properties>
   <scm>
-    <developerConnection>scm:git:ssh://${user.name}@code.renci.org/gitroot/gate_parent</developerConnection>
-    <connection>scm:git:ssh://developername@code.renci.org/gitroot/gate_parent</connection>
-    <tag>HEAD</tag>
+    <developerConnection>scm:git:git@github.com:jdr0887/GATE-Parent.git</developerConnection>
+    <connection>scm:git:git@github.com:jdr0887/GATE-Parent.git</connection>
   </scm>
   <dependencyManagement>
     <dependencies>
