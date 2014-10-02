@@ -24,9 +24,9 @@
     <slf4j.version>1.7.2</slf4j.version>
   </properties>
   <scm>
+    <url>https://github.com/jdr0887/GATE-Parent</url>
     <developerConnection>scm:git:git@github.com:jdr0887/GATE-Parent.git</developerConnection>
     <connection>scm:git:git@github.com:jdr0887/GATE-Parent.git</connection>
-    <tag>HEAD</tag>
   </scm>
   <dependencyManagement>
     <dependencies>
