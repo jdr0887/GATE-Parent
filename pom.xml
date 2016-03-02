@@ -137,6 +137,11 @@
 	<version>${commons.lang3.version}</version>
       </dependency>
       <dependency>
+	<groupId>org.apache.commons</groupId>
+	<artifactId>commons-collections4</artifactId>
+	<version>${commons.collections4.version}</version>
+      </dependency>      
+      <dependency>
 	<groupId>graphlayout</groupId>
 	<artifactId>graphlayout</artifactId>
 	<version>1.2.1</version>
